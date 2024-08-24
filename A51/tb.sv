@@ -37,7 +37,7 @@ module tb;
   
 ///add your code here
   always begin
-    assert property(@(posedge clk) $rose(a) |=> $rose(b)) $info("Success at time : %0t", $time());else $error("Failure at time : %0t", $time());
+    assert property(@(posedge clk) $rose(a) |-> $rose(b)) $info("Success at time : %0t", $time());else $error("Failure at time : %0t", $time());
   end
   
 endmodule
